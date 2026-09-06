@@ -1,0 +1,21 @@
+{% extends "learning_logs/base.html" %}
+{% load django_bootstrap5 %}
+
+{% block content %}
+
+  <h2>Entrar</h2>
+
+  {% if form.errors %}
+    <div class="alert alert-danger" role="alert">
+      Seu nome de usuário e senha não coincidem. Tente novamente.
+    </div>
+  {% endif %}
+
+  <form method='post' action="{% url 'users:login' %}">
+    {% csrf_token %}
+    {% bootstrap_form form %}
+    <input type='hidden' name='next' value="{% url 'learning_logs:index' %}">
+    {% bootstrap_button "Entrar" button_type="submit" button_class="btn-primary" %}
+  </form>
+
+{% endblock content %}
