@@ -1,0 +1,9 @@
+asgiref==3.12.1
+Django==6.1
+django-bootstrap5==26.3
+djangorestframework==3.18.0
+gunicorn==26.2.0
+platformshconfig==2.4.0
+psycopg2-binary==2.9.13
+sqlparse==0.6.0
+tzdata==2026.3
